@@ -1,7 +1,12 @@
 import streamlit as st
 from mistralai import Mistral
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 def generate_response(user_input):
-	api_key = "9F8Lnhk8zfkxKxj3EfCyY3j9RzIaVwjB"
+	api_key = os.gentev("API_KEY")
 	model = "mistral-large-latest"
 	client = Mistral(api_key=api_key)
 	chat_response = client.chat.complete(
