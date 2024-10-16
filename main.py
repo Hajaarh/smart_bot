@@ -1,14 +1,10 @@
 import streamlit as st
 from mistralai import Mistral
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def generate_response(user_input):
-	api_key = os.gentev("API_KEY")
+	
 	model = "mistral-large-latest"
-	client = Mistral(api_key=api_key)
+	client = Mistral(api_key=bot_key)
 	chat_response = client.chat.complete(
 	    model = model,
 	    messages = [
@@ -18,6 +14,7 @@ def generate_response(user_input):
 	        },
 	    ]
 	)
+ 
 	return chat_response.choices[0].message.content
 st.title("Chatbot avec Streamlit")
 st.write("Bienvenue sur l'interface de chatbot. Posez-moi des questions !")
