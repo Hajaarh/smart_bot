@@ -15,8 +15,8 @@ def generate_response(user_input):
         ]
     )
     return chat_response.choices[0].message.content  # N'oubliez pas de retourner la réponse
-st.title("Chatbot avec Streamlit")
-st.write("Bienvenue sur l'interface de chatbot. Posez-moi des questions !")
+st.title("Chatbot de la street")
+st.write("Bienvenue sur l'interface de la street. Posez-moi des questions !")
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 with st.form(key='chat_form', clear_on_submit=True):
