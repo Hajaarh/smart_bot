@@ -2,20 +2,19 @@ import streamlit as st
 from mistralai import Mistral
 
 def generate_response(user_input):
-	
-	model = "mistral-large-latest"
-	client = Mistral(api_key=bot_key)
-	chat_response = client.chat.complete(
-	    model = model,
-	    messages = [
-	        {
-	            "role": "user",
-	            "content": user_input,
-	        },
-	    ]
-	)
- 
-	return chat_response.choices[0].message.content
+    api_key = st.secrets["aielolo"]  # Utilisez des guillemets autour de "aielolo"
+    model = "mistral-large-latest"
+    client = Mistral(api_key=api_key)  # Utilisez la variable api_key ici
+    chat_response = client.chat.complete(
+        model=model,
+        messages=[
+            {
+                "role": "user",
+                "content": user_input,
+            },
+        ]
+    )
+    return chat_response.choices[0].message.content  # N'oubliez pas de retourner la réponse
 st.title("Chatbot avec Streamlit")
 st.write("Bienvenue sur l'interface de chatbot. Posez-moi des questions !")
 if 'chat_history' not in st.session_state:
