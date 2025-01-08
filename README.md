@@ -2,7 +2,7 @@
 
 ## Développement d'un Chatbot IA interactif
 
-### Projet CRM eCommerce : Analyse et Visualisation de données avec MongoDB, FastAPI et Streamlit
+### Projet Chatbot
 
 Ce projet consiste en la création d'une application web interactive permettant une conversation naturelle avec les utilisateurs, utilisant Streamlit pour l'interface utilisateur et Mistral AI pour les capacités conversationnelles. L'application est conçue pour être intuitive, sécurisée et facilement extensible.
 
