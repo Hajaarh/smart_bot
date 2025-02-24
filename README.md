@@ -1,5 +1,3 @@
-# Documentation du Projet
-
 ## Développement d'un Chatbot IA interactif
 
 ### Projet Chatbot
